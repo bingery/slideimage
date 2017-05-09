@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src=lamb.js></script>
+        <style>
+            .gua-slide {
+                position: relative;
+            }
+            .gua-slide-image {
+                display: none;
+            }
+            .gua-active {
+                display: inline-block;;
+            }
+            .gua-slide-button {
+                height: 50px;
+            }
+            .gua-left {
+                left: 0;
+            }
+            .gua-right {
+                right: 0;
+            }
+            .gua-vertical-center {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .gua-slide-indicators {
+                position: absolute;
+                bottom: 10px;
+            }
+            .gua-slide-indi {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: red;
+            }
+            .gua-white {
+                background: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gua-3">
+            <div class="gua-slide" data-imgs=3 data-active=0>
+                <img id=id-guaimage-0 class="gua-slide-image gua-active" src="slideimages/1.jpg" alt="">
+                <img id=id-guaimage-1 class=gua-slide-image src="slideimages/2.jpg" alt="">
+                <img id=id-guaimage-2 class=gua-slide-image src="slideimages/3.jpg" alt="">
+                <button class="gua-slide-button gua-left gua-vertical-center" data-next="-1">上一张</button>
+                <button class="gua-slide-button gua-right gua-vertical-center" data-next="1">下一张</button>
+                <div class="gua-slide-indicators">
+                    <div id=id-indi-0 class="gua-slide-indi gua-white"></div>
+                    <div id=id-indi-1 class="gua-slide-indi"></div>
+                    <div id=id-indi-2 class="gua-slide-indi"></div>
+                </div>
+            </div>
+        </div>
+        <script src=slide.js></script>
+    </body>
+</html>
